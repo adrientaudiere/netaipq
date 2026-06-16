@@ -1,0 +1,48 @@
+Package: netaipq
+Title: Networks and Machine Learning for 'phyloseq' Objects
+Version: 0.0.0.9000
+Authors@R:
+    person("Adrien", "Taudière", , "adrien.taudiere@zaclys.net", role = c("aut", "cre", "cph"),
+           comment = c(ORCID = "0000-0003-1088-1182"))
+Description: Network, graph, causal-inference, and machine-learning tools
+    for 'phyloseq' objects within the 'pqverse' ecosystem. Provides
+    genuinely new analysis methods (co-occurrence and association
+    networks, bipartite-network visualisation, supervised classification,
+    indicator-species and differential-abundance analyses) that go beyond
+    simple 'ggplot2' wrappers. 'netaipq' is the home for any item adding a
+    brand-new machine-learning, network, graph, or statistical-analysis
+    dependency, keeping 'MiscMetabar' lean. Built on top of 'MiscMetabar'.
+License: MIT + file LICENSE
+URL: https://adrientaudiere.github.io/netaipq/,
+    https://github.com/adrientaudiere/netaipq
+BugReports: https://github.com/adrientaudiere/netaipq/issues
+Depends:
+    ggplot2 (>= 3.5.0),
+    MiscMetabar,
+    phyloseq,
+    R (>= 4.1.0)
+Imports:
+    cli,
+    grDevices,
+    igraph,
+    lifecycle,
+    methods,
+    rlang,
+    stats,
+    utils
+Suggests:
+    CompoCor,
+    cooccur,
+    dagitty,
+    ggClusterNet,
+    knitr,
+    netassoc,
+    rmarkdown,
+    testthat (>= 3.0.0),
+    vegan
+Config/testthat/edition: 3
+Encoding: UTF-8
+VignetteBuilder: knitr
+Roxygen: list(markdown = TRUE)
+RdMacros: lifecycle
+Config/roxygen2/version: 8.0.0

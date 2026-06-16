@@ -1,0 +1,30 @@
+url: https://adrientaudiere.github.io/netaipq/
+template:
+  bootstrap: 5
+  bslib:
+    bg: "#f4f0fa"
+    fg: "#2a1a3e"
+    primary: "#5b2a86"
+    secondary: "#1f6f6f"
+
+reference:
+- title: Networks
+  desc: >
+    Build and visualise association and co-occurrence networks of the taxa or
+    samples of a phyloseq object.
+  contents:
+  - bipartite_network_pq
+  - cooccurrence_network_pq
+  - ggclusternet_pq
+  - netassoc_network_pq
+- title: Causal inference
+  desc: >
+    Confront hypothesised causal models with phyloseq sample data.
+  contents:
+  - dag_test_pq
+- title: Compositional correlation
+  desc: >
+    Relate taxa to environmental variables while accounting for
+    compositionality.
+  contents:
+  - sparcev_pq
