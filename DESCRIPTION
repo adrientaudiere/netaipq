@@ -12,7 +12,7 @@ Description: Network, graph, causal-inference, and machine-learning tools
     simple 'ggplot2' wrappers. 'netaipq' is the home for any item adding a
     brand-new machine-learning, network, graph, or statistical-analysis
     dependency, keeping 'MiscMetabar' lean. Built on top of 'MiscMetabar'.
-License: MIT + file LICENSE
+License: AGPL-3
 URL: https://adrientaudiere.github.io/netaipq/,
     https://github.com/adrientaudiere/netaipq
 BugReports: https://github.com/adrientaudiere/netaipq/issues
