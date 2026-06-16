@@ -1,22 +1,29 @@
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+<!-- devtools::build_readme() -->
+
 # netaipq <img src="man/figures/logo.png" align="right" height="138" alt="" />
 
 <!-- badges: start -->
-[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+
+[![Lifecycle:
+experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 <!-- badges: end -->
 
 `netaipq` is the [pqverse](https://github.com/adrientaudiere) home for
 **networks and machine-learning** analyses of
-[`phyloseq`](https://joey711.github.io/phyloseq/) objects: co-occurrence and
-association networks, bipartite-network visualisation, supervised
-classification, indicator-species and differential-abundance methods, and
-other *genuinely new analysis methods* that go beyond a simple `ggplot2`
-wrapper.
+[`phyloseq`](https://joey711.github.io/phyloseq/) objects: co-occurrence
+and association networks, bipartite-network visualisation, supervised
+classification, indicator-species and differential-abundance methods,
+and other *genuinely new analysis methods* that go beyond a simple
+`ggplot2` wrapper.
 
-By absorbing any feature that would add a brand-new machine-learning, network,
-graph, or statistical-analysis dependency, `netaipq` keeps
-[`MiscMetabar`](https://adrientaudiere.github.io/MiscMetabar/) lean. Pure
-`ggplot2` visualisation belongs in `ggplotpq`; cross-study comparators belong
-in `comparpq`.
+By absorbing any feature that would add a brand-new machine-learning,
+network, graph, or statistical-analysis dependency, `netaipq` keeps
+[`MiscMetabar`](https://adrientaudiere.github.io/MiscMetabar/) lean.
+Pure `ggplot2` visualisation belongs in `ggplotpq`; cross-study
+comparators belong in `comparpq`.
 
 ## Installation
 
@@ -30,7 +37,7 @@ remotes::install_github("adrientaudiere/netaipq")
 ## Functions
 
 | Function | Description |
-|----------|-------------|
+|----|----|
 | `bipartite_network_pq()` | Static `ggplot2` bipartite network of samples and taxa |
 
 ## Example
