@@ -2,11 +2,10 @@ url: https://adrientaudiere.github.io/netaipq/
 template:
   bootstrap: 5
   bslib:
-    bg: "#f4f0fa"
+    bg: "#F0FAF8"
     fg: "#2a1a3e"
-    primary: "#5b2a86"
-    secondary: "#1f6f6f"
-
+    primary: "#3a1a00"
+    secondary: "#002d26"
 reference:
 - title: Networks
   desc: >
