@@ -112,7 +112,11 @@ if (FALSE) { # \dontrun{
 # `ggClusterNet` is a GitHub package and needs WGCNA (Bioconductor):
 # remotes::install_github("taowenmicro/ggClusterNet")
 # pak::pkg_install("WGCNA")
-res <- ggclusternet_pq(data_fungi_mini, group = "Height", n = 200)
+data_fungi_mini_woNA4height <- subset_samples(
+  data_fungi_mini,
+  !is.na(data_fungi_mini@sam_data$Height)
+)
+res <- ggclusternet_pq(data_fungi_mini_woNA4height, group = "Height", n = 200)
 res[[1]]
 } # }
 ```

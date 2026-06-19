@@ -43,12 +43,17 @@
 #'   Wen, T. et al. (2022) ggClusterNet: an R package for microbiome network
 #'   analysis and modularity-based multiple network layouts.
 #'   \doi{10.1002/imt2.32}.
+#' @importFrom igraph cluster_fast_greedy modularity membership V E erdos.renyi.game degree_distribution
 #' @examples
 #' \dontrun{
 #' # `ggClusterNet` is a GitHub package and needs WGCNA (Bioconductor):
 #' # remotes::install_github("taowenmicro/ggClusterNet")
 #' # pak::pkg_install("WGCNA")
-#' res <- ggclusternet_pq(data_fungi_mini, group = "Height", n = 200)
+#' data_fungi_mini_woNA4height <- subset_samples(
+#'   data_fungi_mini,
+#'   !is.na(data_fungi_mini@sam_data$Height)
+#' )
+#' res <- ggclusternet_pq(data_fungi_mini_woNA4height, group = "Height", n = 200)
 #' res[[1]]
 #' }
 ggclusternet_pq <- function(
@@ -71,6 +76,13 @@ ggclusternet_pq <- function(
       "i" = "Install it with {.code remotes::install_github(\"taowenmicro/ggClusterNet\")}."
     ))
   }
+  if (!requireNamespace("igraph", quietly = TRUE)) {
+    cli::cli_abort(c(
+      "Package {.pkg igraph} is required for {.fn ggclusternet_pq}.",
+      "i" = "Install it with {.code remotes::install_packages(\"igraph\")}."
+    ))
+  }
+
   verify_pq(physeq)
 
   if (!group %in% colnames(physeq@sam_data)) {
