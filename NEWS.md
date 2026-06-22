@@ -1,4 +1,4 @@
-# netaipq 0.0.0.9000
+# netaipq 0.0.0 (development version)
 
 * Initial development version of the package, providing networks and machine-learning tools for 'phyloseq' objects within the 'pqverse' ecosystem.
 * Add a "Get started with netaipq" vignette and a pkgdown website skeleton.
