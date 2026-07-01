@@ -304,6 +304,7 @@ resolve_projection_coords <- function(
 #'   bipartite_network_pq(ps, projection = "bray", seed = 1)
 #'
 #' # Position the samples from a precomputed UMAP (needs the `umap` package).
+#'   if (requireNamespace("umap", quietly = TRUE)) {
 #'   ps <- prune_samples(sample_names(data_fungi_mini)[1:20], data_fungi_mini)
 #'   ps <- clean_pq(ps, silent = TRUE)
 #'   df_umap <- MiscMetabar::umap_pq(ps, seed = 1)
@@ -315,6 +316,7 @@ resolve_projection_coords <- function(
 #'    label_size_sample = 2,
 #'    taxa_label = taxa_sums(ps)>10000
 #'   )
+#'   }
 #' }
 
 bipartite_network_pq <- function(
