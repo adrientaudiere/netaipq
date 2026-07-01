@@ -5,3 +5,9 @@
 ^CLAUDE\.md$
 ^\.claude$
 ^LICENSE\.md$
+^CONTEXT\.md$
+^README\.html$
+^Rplots\.pdf$
+^README\.Rmd$
+^audits$
+^dev$
