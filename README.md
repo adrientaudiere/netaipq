@@ -1,6 +1,5 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-
 <!-- devtools::build_readme() -->
 
 # netaipq <img src="man/figures/logo.png" align="right" height="138" alt="" />
@@ -36,8 +35,8 @@ remotes::install_github("adrientaudiere/netaipq")
 
 ## Functions
 
-| Function | Description |
-|----|----|
+| Function                 | Description                                            |
+|--------------------------|--------------------------------------------------------|
 | `bipartite_network_pq()` | Static `ggplot2` bipartite network of samples and taxa |
 
 ## Example
