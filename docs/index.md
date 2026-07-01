@@ -19,21 +19,19 @@ comparators belong in `comparpq`.
 You can install the development version of `netaipq` from GitHub with:
 
 ``` r
-
 # install.packages("remotes")
 remotes::install_github("adrientaudiere/netaipq")
 ```
 
 ## Functions
 
-| Function | Description |
-|----|----|
+| Function                                                                                               | Description                                            |
+|--------------------------------------------------------------------------------------------------------|--------------------------------------------------------|
 | [`bipartite_network_pq()`](https://adrientaudiere.github.io/netaipq/reference/bipartite_network_pq.md) | Static `ggplot2` bipartite network of samples and taxa |
 
 ## Example
 
 ``` r
-
 library(netaipq)
 data(data_fungi_mini)
 

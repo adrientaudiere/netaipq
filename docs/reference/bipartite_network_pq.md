@@ -219,9 +219,19 @@ if (requireNamespace("igraph")) {
 
 
 # Position the samples from a precomputed UMAP (needs the `umap` package).
+  if (requireNamespace("umap", quietly = TRUE)) {
   ps <- prune_samples(sample_names(data_fungi_mini)[1:20], data_fungi_mini)
   ps <- clean_pq(ps, silent = TRUE)
   df_umap <- MiscMetabar::umap_pq(ps, seed = 1)
+  bipartite_network_pq(ps, projection = df_umap, sample_color = "Height", seed = 1)
+
+  bipartite_network_pq(ps, projection = df_umap, sample_color = ("Height"), seed = 1,
+   taxa_color="Order",
+   sample_label= as.vector(sample_sums(ps)>10000),
+   label_size_sample = 2,
+   taxa_label = taxa_sums(ps)>10000
+  )
+  }
 #> Taxa are now in columns.
 #> Taxa are now in rows.
 #> ! Function arguments cannot be checked because the package divent is not attached.
@@ -346,15 +356,6 @@ if (requireNamespace("igraph")) {
 #> → Add `CheckArguments=FALSE` to suppress this warning or run `library('divent')`.
 #> Joining with `by = join_by(Sample)`
 #> Joining with `by = join_by(Sample)`
-  bipartite_network_pq(ps, projection = df_umap, sample_color = "Height", seed = 1)
-
-
-  bipartite_network_pq(ps, projection = df_umap, sample_color = ("Height"), seed = 1,
-   taxa_color="Order",
-   sample_label= as.vector(sample_sums(ps)>10000),
-   label_size_sample = 2,
-   taxa_label = taxa_sums(ps)>10000
-  )
 
 # }
 ```

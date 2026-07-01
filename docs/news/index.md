@@ -1,6 +1,8 @@
 # Changelog
 
-## netaipq 0.0.0.9000
+## netaipq 0.1.0 (Development version)
+
+## netaipq 0.0.0
 
 - Initial development version of the package, providing networks and
   machine-learning tools for ‘phyloseq’ objects within the ‘pqverse’
