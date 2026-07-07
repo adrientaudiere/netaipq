@@ -49,11 +49,8 @@
 #' # `ggClusterNet` is a GitHub package and needs WGCNA (Bioconductor):
 #' # remotes::install_github("taowenmicro/ggClusterNet")
 #' # pak::pkg_install("WGCNA")
-#' data_fungi_mini_woNA4height <- subset_samples(
-#'   data_fungi_mini,
-#'   !is.na(data_fungi_mini@sam_data$Height)
-#' )
-#' res <- ggclusternet_pq(data_fungi_mini_woNA4height, group = "Height", n = 200)
+#' # Samples with a missing `group` value are dropped automatically.
+#' res <- ggclusternet_pq(data_fungi_mini, group = "Height", n = 200)
 #' res[[1]]
 #' }
 ggclusternet_pq <- function(
@@ -89,6 +86,15 @@ ggclusternet_pq <- function(
     cli::cli_abort(
       "{.val {group}} is not a column of the {.field sam_data} slot."
     )
+  }
+
+  na_in_group <- is.na(physeq@sam_data[[group]])
+  if (any(na_in_group)) {
+    n_na <- sum(na_in_group)
+    cli::cli_inform(c(
+      "i" = "Dropping {n_na} sample{?s} with a missing value in the {.field {group}} column before building the network."
+    ))
+    physeq <- subset_samples_pq(physeq, !na_in_group)
   }
   physeq <- clean_pq(physeq, silent = TRUE)
 
