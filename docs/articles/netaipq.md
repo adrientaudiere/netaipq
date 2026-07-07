@@ -19,6 +19,7 @@ comparators belong in `comparpq`.
 ## Installation
 
 ``` r
+
 # install.packages("remotes")
 remotes::install_github("adrientaudiere/netaipq")
 ```
@@ -34,6 +35,7 @@ For a readable figure we take a few samples and the commonest taxa from
 `data_fungi_mini` (shipped with `MiscMetabar`).
 
 ``` r
+
 library(netaipq)
 data(data_fungi_mini)
 
@@ -50,6 +52,7 @@ ps
 ```
 
 ``` r
+
 bipartite_network_pq(ps, taxa_color = "Phylum", seed = 1)
 ```
 

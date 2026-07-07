@@ -3,7 +3,7 @@ pkgdown: 2.2.0
 pkgdown_sha: ~
 articles:
   netaipq: netaipq.html
-last_built: 2026-06-15T12:58Z
+last_built: 2026-07-06T12:53Z
 urls:
   reference: https://adrientaudiere.github.io/netaipq/reference
   article: https://adrientaudiere.github.io/netaipq/articles
