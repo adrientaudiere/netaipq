@@ -1,5 +1,4 @@
-# netaipq 0.1.0 (Development version)
-* `ggclusternet_pq()` now drops samples with a missing value in the `group` column before building the network (reporting how many were dropped), fixing an error ("Component sample names do not match") raised when `group` contained `NA`, e.g. `ggclusternet_pq(data_fungi_mini, group = "Height")`.
+# netaipq 0.1.0* `ggclusternet_pq()` now drops samples with a missing value in the `group` column before building the network (reporting how many were dropped), fixing an error ("Component sample names do not match") raised when `group` contained `NA`, e.g. `ggclusternet_pq(data_fungi_mini, group = "Height")`.
 
 # netaipq 0.0.0
 * Initial development version of the package, providing networks and machine-learning tools for 'phyloseq' objects within the 'pqverse' ecosystem.
